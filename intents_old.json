@@ -1,0 +1,80 @@
+{
+    "intents": [
+      {
+        "tag": "saludo",
+        "patterns": [
+          "Hola",
+          "Buenos días",
+          "¿Qué tal?",
+          "¿Cómo estás?",
+          "Hola, ¿qué tal?",
+          "¡Hola!",
+          "Buenas",
+          "Hola, ¿cómo te va?",
+          "Saludos",
+          "Hola, ¿cómo te encuentras?",
+          "¿Qué hay de nuevo?",
+          "Hola, mucho gusto",
+          "Buenas tardes",
+          "Hola, buen día",
+          "¿Qué cuentas?"
+        ],
+        "responses": [
+          "¡Hola! ¿En qué puedo ayudarte?",
+          "¡Buenos días! ¿Cómo te puedo ayudar?",
+          "Hola, ¿en qué puedo asistirte?"
+        ]
+      },
+      {
+        "tag": "preguntar_ciudad",
+        "patterns": [
+          "¿Tienen tiendas en Bogotá?",
+          "¿Dónde está la tienda en Medellín?",
+          "Estoy en Cali, ¿dónde está su tienda?",
+          "Estoy en Bogotá",
+          "¿Dónde puedo encontrarlos en Medellín?"
+        ],
+        "responses": [
+          "Nuestra tienda en Bogotá está ubicada en Calle 123 #45-67.",
+          "Nuestra tienda en Medellín está ubicada en Carrera 10 #12-34.",
+          "Nuestra tienda en Cali está ubicada en Avenida 45 #67-89.",
+          "Tenemos una tienda en Bogotá en Calle 123 #45-67.",
+          "En Medellín, nuestra tienda está en Carrera 10 #12-34."
+        ]
+      },
+      {
+        "tag": "recomendacion_flores",
+        "patterns": [
+          "Quiero comprar flores",
+          "¿Qué flores recomiendas?",
+          "Necesito flores para un cumpleaños",
+          "Flores para una celebración romántica",
+          "¿Qué puedo regalar para el Día de la Madre?"
+        ],
+        "responses": [
+          "Para un cumpleaños, te recomiendo regalar Rosas.",
+          "Para una celebración romántica, te recomiendo regalar Lirios.",
+          "Para el Día de la Madre, te recomiendo regalar Tulipanes.",
+          "¿Para qué ocasión necesitas las flores? (cumpleaños, celebración romántica, día de la madre)"
+        ]
+      },
+      {
+        "tag": "despedida",
+        "patterns": [
+          "Gracias",
+          "Adiós",
+          "Hasta luego",
+          "Nos vemos",
+          "Muchas gracias por la ayuda",
+          "Eso es todo",
+          "Nada más"
+        ],
+        "responses": [
+          "¡De nada! ¿Puedo ayudarte con algo más?",
+          "¡Hasta luego! Que tengas un buen día.",
+          "¡Nos vemos! Si necesitas más ayuda, aquí estaré."
+        ]
+      }
+    ]
+  }
+  
