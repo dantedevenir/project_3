@@ -1,0 +1,25 @@
+#chatbot-container {
+    position: fixed; /* Fija el chatbot en la pantalla, sin importar el desplazamiento */
+    bottom: 20px; /* Posiciona el chatbot a 20 píxeles del borde inferior de la pantalla */
+    right: 20px; /* Posiciona el chatbot a 20 píxeles del borde derecho de la pantalla */
+    background-color: white; /* Color de fondo del chatbot, blanco */
+    border: 1px solid #add; /* Añade un borde de 1 píxel de color #add */
+    border-radius: 4px; /* Redondea las esquinas del contenedor */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Añade una sombra sutil para dar un efecto de elevación */
+    width: 300px; /* Establece el ancho del contenedor a 300 píxeles */
+    z-index: 1000; /* Asegura que el chatbot esté por encima de otros elementos de la página */
+}
+
+#chatbot-header {
+    background-color: cadetblue; /* Establece el color de fondo del encabezado del chatbot a cadetblue */
+    color: white; /* Establece el color del texto del encabezado a blanco */
+    padding: 10px; /* Añade un relleno de 10 píxeles alrededor del contenido del encabezado */
+    cursor: pointer; /* Cambia el cursor a "pointer" cuando se pasa sobre el encabezado, indicando que es interactivo */
+    text-align: center; /* Centra el texto dentro del encabezado */
+    border-top-left-radius: 4px; /* Redondea la esquina superior izquierda del encabezado */
+    border-top-right-radius: 4px; /* Redondea la esquina superior derecha del encabezado */
+}
+
+#chatbot-body {
+    padding: 10px; /* Añade un relleno de 10 píxeles dentro del cuerpo del chatbot */
+}

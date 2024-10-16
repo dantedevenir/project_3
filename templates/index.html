@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi chatbot talento tech</title>
+    <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='css/estilos.css')}}"
+    />
+</head>
+<body>
+    <!-- Contenido visible de la página -->
+    <header>
+        <h1>Bienvenido a mi Aplicación Talento tech</h1>
+        <div id="chatbot-container">
+            <div id="chatbot-header" onclick="toggleChatbot()">
+                Chatbot  
+            </div>   
+            <div id="chatbot-body" style="display: none">
+                <div id="chat-messages"></div> <!-- Aquí se mostrarán los mensajes -->
+                <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function toggleChatbot(){
+            var chatBody = document.getElementById("chatbot-body");
+            chatBody.style.display = chatBody.style.display === "none" ? "block" : "none";
+        }
+
+        function sendMessage(){
+            var input = document.getElementById("chatbot-input");
+            var message = input.value;
+            input.value = "";  // Limpiar el input después de enviar el mensaje
+
+            // Hacer la petición POST al servidor Flask con el mensaje del usuario
+            fetch("/chatbot", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ message: message })  // Enviar el mensaje en formato JSON
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                var chatMessages = document.getElementById("chat-messages");
+
+                // Mostrar el mensaje del usuario
+                chatMessages.innerHTML += `<div><strong>Tú:</strong> ${message}</div>`;
+
+                // Mostrar la respuesta del chatbot
+                chatMessages.innerHTML += `<div><strong>Chatbot:</strong> ${data.response}</div>`;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
